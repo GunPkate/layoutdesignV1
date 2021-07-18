@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        header {
+            background-image:linear-gradient(rgba(255, 255, 177,0.5),rgba(250, 175, 158, 0.4));
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .nav-bar {
+            display: flex;
+            list-style: none;
+            margin:5px;
+            padding: 5px;
+            border-radius: 15px;
+            background-color: rgba(250, 175, 158, 0.3);
+        }
+
+        .nav-bar a{
+            text-decoration: none;
+            display: inline-block;
+            padding: 1em;
+            color: rgb(196, 124, 211);
+            font-weight: bold;
+        }
+
+        .nav-bar:hover{
+            background-color: gold;
+            border-radius: 15px;
+            color: honeydew;
+        }
+
+        main {
+            background-image: url(https://picsum.photos/id/110/1200);
+            background-repeat: no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main > * {
+            /* outline: 1px dashed lime; */
+            flex-grow: 1;
+        }
+
+        .main-center {
+            flex: 2 500px;
+            text-align: center;
+            display: flex; 
+            flex-flow: column;
+            margin: 5px;
+            justify-content: flex-start; 
+            align-items: center;
+        }
+
+        .main-left,.main-right {
+            background-color: rgb(245, 138, 113,0.4);
+            flex-basis: 100px;
+        }
+
+        .text {
+            background-color: rgba(250, 175, 158, 0.6);
+            border-radius: 10px;
+            margin: 15px 20px 0 20px;
+            padding: 5px;
+        }
+
+        .news,.ad {
+            background-color: rgba(250, 175, 158, 0.6);
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px 15px 0 15px;
+        }
+
+
+
+        footer {
+            height: 10vh;
+            background-image:linear-gradient(rgba(250, 175, 158, 0.4),rgba(255, 255, 177,0.5));
+        }
+
+        @media (max-width:750px) {
+            html{
+                font-size: 0.8em;
+            }
+
+            header {
+            justify-content: center;
+           }
+
+        .nav-bar {
+            width:100%;
+            justify-content: space-around;
+            margin: 2px;
+            }
+        }
+
+        @media (max-width:600px) {
+            html{
+                font-size: 0.75em;
+            }
+
+            header {
+                height: auto;
+                flex-flow: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-bar"><a href="#">Home</a></div>
+        <div class="nav-bar"><a href="#">About</a></div>
+        <div class="nav-bar"><a href="#">Project</a></div>
+        <div class="nav-bar"><a href="#">Contact</a></div>
+    </header>
+    <main>
+        <div class="main-left">
+            <div class="news">
+                <h1>News</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis voluptate, dolor cumque iure repudiandae doloribus quisquam alias aperiam eum eos dicta dolores? Cum officia repellat eligendi beatae maxime et?0</p>
+            </div>
+        </div>
+
+        <div class="main-center">
+            <div class="text">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis voluptate, dolor cumque iure repudiandae doloribus quisquam alias aperiam eum eos dicta dolores? Cum officia repellat eligendi beatae maxime et?0</p>
+            </div>
+            <div class="text">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis voluptate, dolor cumque iure repudiandae doloribus quisquam alias aperiam eum eos dicta dolores? Cum officia repellat eligendi beatae maxime et?0</p>
+            </div>
+
+        </div>
+
+        <div class="main-right">
+            <div class="ad">
+                <h1>Ad</h1>
+                <p>Adipisicing elit. Dolorem perferendis voluptate, dolor cumque iure repudiandae doloribus quisquam alias aperiam eum eos dicta dolores? Cum officia repellat eligendi beatae maxime et?0</p>
+            </div>
+        </div>
+    </main>  
+    <footer></footer>  
+</body>
+</html>
